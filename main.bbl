@@ -1,0 +1,88 @@
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{#1}
+\csname url@rmstyle\endcsname
+\providecommand{\newblock}{\relax}
+\providecommand{\bibinfo}[2]{#2}
+\providecommand\BIBentrySTDinterwordspacing{\spaceskip=0pt\relax}
+\providecommand\BIBentryALTinterwordstretchfactor{4}
+\providecommand\BIBentryALTinterwordspacing{\spaceskip=\fontdimen2\font plus
+\BIBentryALTinterwordstretchfactor\fontdimen3\font minus
+  \fontdimen4\font\relax}
+\providecommand\BIBforeignlanguage[2]{{%
+\expandafter\ifx\csname l@#1\endcsname\relax
+\typeout{** WARNING: IEEEtran.bst: No hyphenation pattern has been}%
+\typeout{** loaded for the language `#1'. Using the pattern for}%
+\typeout{** the default language instead.}%
+\else
+\language=\csname l@#1\endcsname
+\fi
+#2}}
+
+\bibitem{han2013localization}
+G.~Han, H.~Xu, T.~Q. Duong, J.~Jiang, and T.~Hara, ``Localization algorithms of
+  wireless sensor networks: a survey,'' \emph{Telecommunication Systems},
+  vol.~52, no.~4, pp. 2419--2436, 2013.
+
+\bibitem{wiki:xxx}
+{Wikipedia contributors}, ``Tennis --- {Wikipedia}{,} the free encyclopedia,''
+  \url{https://en.wikipedia.org/w/index.php?title=Tennis&oldid=973071992},
+  2020, [Online; accessed 16-August-2020].
+
+\bibitem{baodong2014hawkeye}
+Y.~Baodong, ``Hawkeye technology using tennis match,'' \emph{Computer Modelling
+  and New Technologies}, vol.~18, pp. 400--402, 2014.
+
+\bibitem{gangal2007hawkeye}
+S.~Gangal and S.~Raje, ``The hawkeye technology,'' \emph{Computer Science and
+  Engineering (CSE) Department, Indian Institute of Technology, Bombay}, 2007.
+
+\bibitem{chao2016tennis}
+C.~Chao, ``Tennis hawkeye system based on labview platform,'' \emph{Modern
+  Electronics Technique}, no.~3, p.~29, 2016.
+
+\bibitem{lai2007study}
+Q.~Lai and Z.~Yu-ling, ``Study on the effects of" hawk-eye" on development of
+  tennis [j],'' \emph{Journal of Guangzhou Sport University}, vol.~3, 2007.
+
+\bibitem{kaune2012accuracy}
+R.~Kaune, ``Accuracy studies for tdoa and toa localization,'' in \emph{2012
+  15th International Conference on Information Fusion}.\hskip 1em plus 0.5em
+  minus 0.4em\relax IEEE, 2012, pp. 408--415.
+
+\bibitem{laaraiedh2011comparison}
+M.~Laaraiedh, L.~Yu, S.~Avrillon, and B.~Uguen, ``Comparison of hybrid
+  localization schemes using rssi, toa, and tdoa,'' in \emph{17th European
+  Wireless 2011-Sustainable Wireless Technologies}.\hskip 1em plus 0.5em minus
+  0.4em\relax VDE, 2011, pp. 1--5.
+
+\bibitem{mistry2015rssi}
+H.~P. Mistry and N.~H. Mistry, ``Rssi based localization scheme in wireless
+  sensor networks: a survey,'' in \emph{2015 Fifth International Conference on
+  Advanced Computing \& Communication Technologies}.\hskip 1em plus 0.5em minus
+  0.4em\relax IEEE, 2015, pp. 647--652.
+
+\bibitem{tarwani2017survey}
+K.~M. Tarwani and S.~Edem, ``Survey on recurrent neural network in natural
+  language processing,'' \emph{Int. J. Eng. Trends Technol}, vol.~48, pp.
+  301--304, 2017.
+
+\bibitem{smagulova2019survey}
+K.~Smagulova and A.~P. James, ``A survey on lstm memristive neural network
+  architectures and applications,'' \emph{The European Physical Journal Special
+  Topics}, vol. 228, no.~10, pp. 2313--2324, 2019.
+
+\bibitem{sahoo2019long}
+B.~B. Sahoo, R.~Jha, A.~Singh, and D.~Kumar, ``Long short-term memory (lstm)
+  recurrent neural network for low-flow hydrological time series forecasting,''
+  \emph{Acta Geophysica}, vol.~67, no.~5, pp. 1471--1481, 2019.
+
+\bibitem{taud2018multilayer}
+H.~Taud and J.~Mas, ``Multilayer perceptron (mlp),'' in \emph{Geomatic
+  Approaches for Modeling Land Change Scenarios}.\hskip 1em plus 0.5em minus
+  0.4em\relax Springer, 2018, pp. 451--455.
+
+\bibitem{kingma2014adam}
+D.~P. Kingma and J.~Ba, ``Adam: A method for stochastic optimization,''
+  \emph{arXiv preprint arXiv:1412.6980}, 2014.
+
+\end{thebibliography}

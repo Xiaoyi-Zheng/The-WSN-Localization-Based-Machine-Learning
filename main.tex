@@ -1,0 +1,130 @@
+% !TEX options=--shell-escape
+
+\documentclass[10pt,conference,compsocconf]{styles/IEEEtran}
+% Add the compsoc option for Computer Society conferences.
+%
+% If IEEEtran.cls has not been installed into the LaTeX system files,
+% manually specify the path to it like:
+% \documentclass[conference]{../sty/IEEEtran}
+
+
+% DIRECTORIES
+\def\FIGDIR{./figures}             % directory of pictures/diagrams
+\def\DATADIR{./data}                % directory of plots/data
+\def\TBLDIR{./tables}             % directory of pictures/diagrams
+\def\SECDIR{./sections}            % directory of sections
+\def\STYDIR{./styles}            % directory of sections
+\def\CODEDIR{./code}            % directory of code snippets
+
+
+%define e.g. style
+\def\eg{\emph{e.g.~}}
+\def\eg{\emph{i.e.~}}
+
+\usepackage{\STYDIR/mystyle}
+\usepackage{optidef}
+\usepackage{circuitikz}
+\usepackage{mathtools}
+\usepackage{color, colortbl}
+\usepackage{balance}                % balance last two columns of the last page
+\definecolor{Gray}{gray}{0.9}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+\usepackage{cite}
+\usepackage{url}
+\usepackage{float}
+\usepgfplotslibrary{colorbrewer}
+
+% https://tex.stackexchange.com/questions/7953/how-to-expand-texs-main-memory-size-pgfplots-memory-overload
+\usepgfplotslibrary{external} 
+\tikzexternalize
+
+
+%https://tex.stackexchange.com/ questions/425584/colorbrewer-cycle-list-not-showing-markers
+
+\pgfplotsset{
+        % initialize Dark2
+        % cycle list/Set2,
+        cycle list/Dark2,
+        % combine it with 'mark list*':
+        cycle multiindex* list={
+            mark list*\nextlist
+            % Set2\nextlist
+            Dark2\nextlist
+        },
+    }
+
+\captionsetup{%
+  format=plain,%
+ % textformat=period,
+  justification=RaggedRight,
+  singlelinecheck=true,
+}
+
+% https://tex.stackexchange.com/questions/72802/can-i-make-formulae-thicker
+\newcommand*{\Scale}[2][5]{\scalebox{#1}{#2}}%
+
+% https://tex.stackexchange.com/questions/98003/filter-rows-from-a-table
+% https://tex.stackexchange.com/questions/301985/filter-pgfplots-data-more-than-once-e-g-with-discard-if
+\pgfplotsset{
+    discard if not/.style 2 args={
+        x filter/.append code={
+            \edef\tempa{\thisrow{#1}}
+            \edef\tempb{#2}
+            \ifx\tempa\tempb
+            \else
+                \def\pgfmathresult{inf}
+            \fi
+        }
+    }
+}
+
+\begin{document}
+
+%
+% paper title
+\title{The WSN Localization Based Machine Learning \\ Application to Tennis Game}
+
+\author{
+  \IEEEauthorblockN{Xiaoyi Zheng, Xinhui Ding, Zian Chen}
+  \IEEEauthorblockA{University of Waterloo\\
+    Ontario, Canada\\
+  {x94zheng\,,x55ding\,,z677chen}@uwaterloo.ca}
+}
+
+%\author{\IEEEauthorblockN{Double blind}
+%\IEEEauthorblockA{Double blind}}
+
+\maketitle
+
+
+\begin{abstract}
+\input \SECDIR/00-abstract.tex
+\end{abstract}
+
+%\IEEEpeerreviewmaketitle
+
+% SECTIONS
+\input \SECDIR/01-introduction.tex
+\input \SECDIR/02-background.tex
+\input \SECDIR/04-methodology.tex
+\input \SECDIR/05-evaluation.tex
+\input \SECDIR/06-conclusions.tex
+
+
+%-----------
+% references
+%-----------
+
+% put references in toc/bookmarks
+\addcontentsline{toc}{section}{References}
+
+% bibliography
+\balance
+\bibliographystyle{\STYDIR/IEEEtran}
+\bibliography{cite}
+
+% that's all folks
+
+\end{document}
